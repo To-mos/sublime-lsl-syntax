@@ -19,12 +19,6 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>^\s*\n</string>
-			<key>name</key>
-			<string>invalid.suspect.source.empty.line.lsl</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>^\s+</string>
 			<key>name</key>
 			<string>indentation.lsl</string>
@@ -46,12 +40,6 @@
 			<string>^(?!\s|state|default|float|integer|key|list|rotation|string|vector|\w+\s*\()\b.*$</string>
 			<key>name</key>
 			<string>invalid.source.line.begin.lsl</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>([^{};\s,)\]/]+|\s+|\)|,|])(?&lt;!//)$</string>
-			<key>name</key>
-			<string>invalid.suspect.source.line.end.lsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
