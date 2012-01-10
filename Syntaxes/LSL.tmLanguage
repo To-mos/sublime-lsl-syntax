@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
@@ -12,175 +12,50 @@
 	<key>foldingStopMarker</key>
 	<string>^\s*\}</string>
 	<key>keyEquivalent</key>
-	<string>^l</string>
+	<string>^~L</string>
 	<key>name</key>
 	<string>LSL</string>
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>match</key>
-			<string>^\s+</string>
-			<key>name</key>
-			<string>indentation.lsl</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(&lt;|=|,|\(|\*|/)\s*-</string>
-			<key>name</key>
-			<string>valid.minus.lsl</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>-[.0-9]</string>
-			<key>name</key>
-			<string>invalid.source.minus.lsl</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>^(?!\s|state|default|float|integer|key|list|rotation|string|vector|\w+\s*\()\b.*$</string>
-			<key>name</key>
-			<string>invalid.source.line.begin.lsl</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(^state\b\s+default\b|\s*state\b\s*$)</string>
-			<key>name</key>
-			<string>invalid.suspect.source.multiple.spaces.lsl</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>constant.state.lsl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.suspect.space.double.lsl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.states.lsl</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>^(?:(?=default\b|state\b))(state\b(?!\s+default\b))*(\s\s+)*\s*(default\b|\w*)(?!$)</string>
-			<key>name</key>
-			<string>meta.name.state.declare.lsl</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>constant.state.lsl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.suspect.space.double.lsl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.states.lsl</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>\b(state\b)(\s\s+)*\s*(\w*)(?!$)</string>
-			<key>name</key>
-			<string>meta.name.states.lsl</string>
+			<key>include</key>
+			<string>#round-brackets</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\b(\w+\b)*(\s\s+)*\s*(\w+\b)(\s\s+)*\s*(\()(?!$)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.lsl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.suspect.space.double.lsl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.functions.global.declare.lsl</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.suspect.space.double.lsl</string>
-				</dict>
-			</dict>
+			<string>//</string>
 			<key>end</key>
-			<string>\)(?!$)</string>
+			<string>$\n?</string>
 			<key>name</key>
-			<string>meta.functions.global.declare.lsl</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-			</array>
+			<string>comment.line.double-slash.lsl</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>meta.variable.global.declare.lsl</string>
-				</dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.lsl</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>invalid.suspect.space.double.lsl</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.variable.global.declare.lsl</string>
-				</dict>
-			</dict>
 			<key>match</key>
-			<string>^(\w+\b)(\s\s+)*\s*(\w+)(?!$)</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>LSL Types</string>
-			<key>match</key>
-			<string>\b(float|integer|key|list|rotation|string|vector)\b</string>
+			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(|-)?[0-9]+)?)\b</string>
 			<key>name</key>
-			<string>storage.type.lsl</string>
+			<string>constant.numeric.lsl</string>
 		</dict>
 		<dict>
 			<key>comment</key>
 			<string>LSL Flow-control keywords</string>
 			<key>match</key>
-			<string>\b(do|else|for|if|jump|return|while)\b</string>
+			<string>\b(default|state|for|do|while|if|else|jump|return )\b</string>
 			<key>name</key>
 			<string>keyword.control.lsl</string>
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>LSL Types</string>
+			<key>match</key>
+			<string>\b(integer|float|string|key|vector|rotation|list|function)\b</string>
+			<key>name</key>
+			<string>storage.type.lsl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>LSL Constants</string>
 			<key>match</key>
-			<string>\b(DEG_TO_RAD|EOF|FALSE|NULL_KEY|PI(_BY_TWO)?|RAD_TO_DEG|SQRT2|T(RUE|WO_PI)|ZERO_(ROTATION|VECTOR))\b</string>
+			<string>\b(PI|TWO_PI|NULL_KEY|SCRIPTED)\b</string>
 			<key>name</key>
 			<string>constant.language.lsl</string>
 		</dict>
@@ -188,15 +63,15 @@
 			<key>comment</key>
 			<string>LSL Events</string>
 			<key>match</key>
-			<string>\b(at(_(rot_target|target)|tach)|c(hanged|o(llision(_(end|start))?|ntrol))|dataserver|email|http_response|l(and_collision(_(end|start))?|i(nk_message|sten))|mo(ney|ving_(end|start))|no(_sensor|t_at_(rot_target|target))|o(bject_rez|n_rez)|r(emote_data|un_time_permissions)|s(ensor|t(ate_(entry|exit)))|t(imer|ouch(_(end|start))?))\b</string>
+			<string>\b(at_rot_target|at_target|attach|changed|collision|collision_end|collision_start|control|dataserver|email|http_response|land_collision|land_collision_end|land_collision_start|link_message|listen|money|moving_end|moving_start|no_sensor|not_at_rot_target|not_at_target|object_rez|on_rez|remote_data|run_time_permissions|sensor|state_entry|state_exit|timer|touch|touch_end|touch_start)\b</string>
 			<key>name</key>
-			<string>constant.event.lsl</string>
+			<string>constant.language.lsl.events</string>
 		</dict>
 		<dict>
 			<key>comment</key>
 			<string>LSL Functions ll*</string>
 			<key>match</key>
-			<string>\bll(R(o(t(Between|2(Up|Euler|Fwd|Left|A(ngle|xis))|Target(Remove)?|ateTexture|LookAt)|und)|e(set(Script|Time|OtherScript)|z(Object|AtRoot)|quest(SimulatorData|InventoryData|Permissions|AgentData)|freshPrimURL|gionSay|leaseC(ontrols|amera)|mo(te(Data(Reply|SetRegion)|LoadScriptPin)|ve(Inventory|VehicleFlags|FromLand(BanList|PassList)))))|G(ive(Money|Inventory(List)?)|odLikeRezObject|et(ObjectDetails|R(o(t|ot(Rotation|Position))|egion(Name|Corner|TimeDilation|F(PS|lags)))|G(MTclock|eometricCenter)|Mass|BoundingBox|S(c(ale|ript(State|Name))|ta(tus|rtParameter)|imulatorHostname|u(nDirection|bString))|N(otecardLine|umberOf(Sides|NotecardLines|Prims)|extEmail)|C(olor|enterOfMass|amera(Rot|Pos)|reator)|T(ime(stamp|OfDay)?|orque|exture(Rot|Scale|Offset)?)|Inventory(N(umber|ame)|Creator|Type|PermMask|Key)|O(wner(Key)?|mega|bject(Mass|Name|Desc|P(ermMask|rimCount)))|Date|UnixTime|P(os|ermissions(Key)?|arcel(MaxPrims|Details|Prim(Count|Owners)|Flags)|rimitiveParams)|Energy|Vel|Key|F(orce|reeMemory)|Wallclock|L(i(st(EntryType|Length)|nk(N(umber|ame)|Key))|ocal(Rot|Pos)|andOwnerAt)|A(n(imation(List)?|dResetTime)|ccel|ttached|lpha|gent(Size|Info)))|round(Repel|Slope|Normal|Contour)?)|XorBase64Strings(Correct)?|M(inEventDelay|o(d(ifyLand|Pow)|veToTarget)|essageLinked|D5String|apDestination)|B(ase64To(String|Integer)|reak(Link|AllLinks))|S(hout|c(aleTexture|riptDanger)|t(op(MoveToTarget|Sound|Hover|PointAt|LookAt|Animation)|artAnimation|ring(T(oBase64|rim)|Length))|i(n|tTarget)|ubStringIndex|e(n(sor(Re(peat|move))?|dRemoteData)|t(R(ot|emoteScriptAccessPin)|Buoyancy|S(c(ale|riptState)|tatus|itText|ound(Radius|Queueing))|HoverHeight|C(olor|amera(Params|EyeOffset|AtOffset))|T(imerEvent|o(uchText|rque)|ext(ure(Anim)?)?)|Object(Name|Desc)|Damage|P(os|a(yPrice|rcelMusicURL)|rim(itiveParams|URL))|Vehicle(RotationParam|Type|VectorParam|Fl(oatParam|ags))|Force(AndTorque)?|L(ink(Color|Texture|PrimitiveParams|Alpha)|ocalRot)|Alpha))|qrt|leep|a(y|meGroup))|HTTPRequest|C(SV2List|o(s|llision(S(ound|prite)|Filter))|eil|l(o(seRemoteDataChannel|ud)|earCameraParams)|reateLink)|T(o(Upper|Lower)|eleportAgent(Home)?|a(n|keC(ontrols|amera)|rget(Remove|Omega)?)|riggerSound(Limited)?)|In(s(tantMessage|ertString)|tegerToBase64)|O(penRemoteDataChannel|verMyLand|ffsetTexture|wnerSay)|D(i(e|alog)|umpList2String|e(t(ected(Rot|Gr(oup|ab)|Name|Type|Owner|Pos|Vel|Key|LinkNumber)|achFromAvatar)|leteSub(String|List)))|Un(Sit|escapeURL)|P(o(intAt|w)|ushObject|laySound(Slave)?|a(ss(Collisions|Touches)|r(seString(2List|KeepNulls)|celMedia(CommandList|Query)|ticleSystem))|reloadSound)|E(scapeURL|dgeOfWorld|uler2Rot|jectFromLand|mail)|V(olumeDetect|ec(Mag|Norm|Dist))|Key2Name|F(orceMouselook|loor|abs|rand)|W(hisper|ind|ater)|L(ist(R(eplaceList|andomize)|S(tatistics|ort)|2(Rot|String|CSV|Integer|Vector|Key|Float|List(Strided)?)|InsertList|en(Remove|Control)?|FindList)|o(o(pSound(Master|Slave)?|kAt)|adURL|g(10)?))|A(sin|ngleBetween|cos|t(tachToAvatar|an2)|d(dToLand(BanList|PassList)|justSoundVolume)|pply(RotationalImpulse|Impulse)|vatarOnSitTarget|llowInventoryDrop|x(isAngle2Rot|es2Rot)|bs))\b</string>
+			<string>\b(llAbs|llAcos|llAddToLandBanList|llAddToLandPassList|llAdjustSoundVolume|llAllowInventoryDrop|llAngleBetween|llApplyImpulse|llApplyRotationalImpulse|llAsin|llAtan2|llAttachToAvatar|llAvatarOnSitTarget|llAxes2Rot|llAxisAngle2Rot|llBase64ToInteger|llBase64ToString|llBreakAllLinks|llBreakLink|llCeil|llClearCameraParams|llCloseRemoteDataChannel|llCloud|llCollisionFilter|llCollisionSound|llCollisionSprite|llCos|llCreateLink|llCSV2List|llDeleteSubList|llDeleteSubString|llDetachFromAvatar|llDetectedGrab|llDetectedGroup|llDetectedKey|llDetectedLinkNumber|llDetectedName|llDetectedOwner|llDetectedPos|llDetectedRot|llDetectedType|llDetectedVel|llDialog|llDie|llDumpList2String|llEdgeOfWorld|llEjectFromLand|llEmail|llEscapeURL|llEuler2Rot|llFabs|llFloor|llForceMouselook|llFrand|llGetAccel|llGetAgentInfo|llGetAgentSize|llGetAlpha|llGetAndResetTime|llGetAnimation|llGetAnimationList|llGetAttached|llGetBoundingBox|llGetCameraPos|llGetCameraRot|llGetCenterOfMass|llGetColor|llGetCreator|llGetDate|llGetEnergy|llGetForce|llGetFreeMemory|llGetGeometricCenter|llGetGMTclock|llGetInventoryCreator|llGetInventoryKey|llGetInventoryName|llGetInventoryNumber|llGetInventoryPermMask|llGetInventoryType|llGetKey|llGetLandOwnerAt|llGetLinkKey|llGetLinkName|llGetLinkNumber|llGetListEntryType|llGetListLength|llGetLocalPos|llGetLocalRot|llGetMass|llGetNextEmail|llGetNotecardLine|llGetNumberOfNotecardLines|llGetNumberOfPrims|llGetNumberOfSides|llGetObjectDesc|llGetObjectMass|llGetObjectName|llGetObjectPermMask|llGetOmega|llGetOwner|llGetOwnerKey|llGetParcelFlags|llGetPermissions|llGetPermissionsKey|llGetPos|llGetPrimitiveParams|llGetRegionCorner|llGetRegionFlags|llGetRegionFPS|llGetRegionName|llGetRegionTimeDilation|llGetRootPosition|llGetRootRotation|llGetRot|llGetScale|llGetScriptName|llGetScriptState|llGetSimulatorHostname|llGetStartParameter|llGetStatus|llGetSubString|llGetSunDirection|llGetTexture|llGetTextureOffset|llGetTextureRot|llGetTextureScale|llGetTime|llGetTimeOfDay|llGetTimestamp|llGetTorque|llGetUnixTime|llGetVel|llGetWallclock|llGiveInventory|llGiveInventoryList|llGiveMoney|llGround|llGroundContour|llGroundNormal|llGroundRepel|llGroundSlope|llHTTPRequest|llInsertString|llInstantMessage|llIntegerToBase64|llKey2Name|llList2CSV|llList2Float|llList2Integer|llList2Key|llList2List|llList2ListStrided|llList2Rot|llList2String|llList2Vector|llListen|llListenControl|llListenRemove|llListFindList|llListInsertList|llListRandomize|llListReplaceList|llListSort|llListStatistics|llLoadURL|llLog|llLog10|llLookAt|llLoopSound|llLoopSoundMaster|llLoopSoundSlave|llMapDestination|llMD5String|llMessageLinked|llMinEventDelay|llModifyLand|llModPow|llMoveToTarget|llOffsetTexture|llOpenRemoteDataChannel|llOverMyLand|llOwnerSay|llParcelMediaCommandList|llParcelMediaQuery|llParseString2List|llParseStringKeepNulls|llParticleSystem|llPassCollisions|llPassTouches|llPlaySound|llPlaySoundSlave|llPointAt|llPow|llPreloadSound|llPushObject|llReleaseCamera|llReleaseControls|llRemoteDataReply|llRemoteDataSetRegion|llRemoteLoadScriptPin|llRemoveFromLandBanList|llRemoveFromLandPassList|llRemoveInventory|llRemoveVehicleFlags|llRequestAgentData|llRequestInventoryData|llRequestPermissions|llRequestSimulatorData|llResetOtherScript|llResetScript|llResetTime|llRezAtRoot|llRezObject|llRot2Angle|llRot2Axis|llRot2Euler|llRot2Fwd|llRot2Left|llRot2Up|llRotateTexture|llRotBetween|llRotLookAt|llRotTarget|llRotTargetRemove|llRound|llSameGroup|llSay|llScaleTexture|llScriptDanger|llSendRemoteData|llSensor|llSensorRemove|llSensorRepeat|llSetAlpha|llSetBuoyancy|llSetCameraAtOffset|llSetCameraEyeOffset|llSetCameraParams|llSetColor|llSetDamage|llSetForce|llSetForceAndTorque|llSetHoverHeight|llSetLinkAlpha|llSetLinkColor|llSetLocalRot|llSetObjectDesc|llSetObjectName|llSetParcelMusicURL|llSetPayPrice|llSetPos|llSetPrimitiveParams|llSetRemoteScriptAccessPin|llSetRot|llSetScale|llSetScriptState|llSetSitText|llSetSoundQueueing|llSetStatus|llSetText|llSetTexture|llSetTextureAnim|llSetTimerEvent|llSetTorque|llSetTouchText|llSetVehicleFlags|llSetVehicleFloatParam|llSetVehicleRotationParam|llSetVehicleType|llSetVehicleVectorParam|llShout|llSin|llSitTarget|llSleep|llSqrt|llStartAnimation|llStopAnimation|llStopHover|llStopLookAt|llStopMoveToTarget|llStopPointAt|llStopSound|llStringLength|llStringToBase64|llSubStringIndex|llTakeControls|llTan|llTarget|llTargetOmega|llTargetRemove|llTeleportAgentHome|llToLower|llToUpper|llTriggerSound|llTriggerSoundLimited|llUnescapeURL|llUnSit|llVecDist|llVecMag|llVecNorm|llVolumeDetect|llWater|llWhisper|llWind|llXorBase64StringsCorrect)\b</string>
 			<key>name</key>
 			<string>support.function.lsl</string>
 		</dict>
@@ -204,27 +79,15 @@
 			<key>comment</key>
 			<string>LSL Function Constants</string>
 			<key>match</key>
-			<string>\b(OBJECT_(NAME|DESC|POS|ROT|VELOCITY|OWNER|GROUP|CREATOR)|R(OTATE|E(GION_FLAG_(RESTRICT_PUSHOBJECT|BLOCK_(TERRAFORM|FLY)|SANDBOX|DISABLE_(COLLISIONS|PHYSICS)|FIXED_SUN|ALLOW_D(IRECT_TELEPORT|AMAGE))|MOTE_DATA_(RE(PLY|QUEST)|CHANNEL)|VERSE))|MASK_(GROUP|BASE|NEXT|OWNER|EVERYONE)|S(MOOTH|C(RIPTED|ALE)|T(RING_TRIM(_(HEAD|TAIL))?|ATUS_(R(OTATE_(X|Y|Z)|ETURN_AT_EDGE)|BLOCK_GRAB|SANDBOX|DIE_AT_EDGE|PH(YSICS|ANTOM))))|HTTP_(M(IMETYPE|ETHOD)|BODY_(MAXLENGTH|TRUNCATED)|VERIFY_CERT)|C(HANGED_(S(HAPE|CALE)|COLOR|TEXTURE|INVENTORY|LINK|ALLOWED_DROP)|ONTROL_(R(IGHT|OT_(RIGHT|LEFT))|ML_LBUTTON|BACK|DOWN|UP|FWD|L(BUTTON|EFT))|AMERA_(BEHINDNESS_(LAG|ANGLE)|DISTANCE|P(ITCH|OSITION(_(THRESHOLD|L(OCKED|AG)))?)|FOCUS(_(THRESHOLD|OFFSET|L(OCKED|AG)))?|ACTIVE))|TYPE_(ROTATION|STRING|IN(TEGER|VALID)|VECTOR|KEY|FLOAT)|INVENTORY_(GESTURE|BODYPART|S(CRIPT|OUND)|NOTECARD|CLOTHING|TEXTURE|OBJECT|LANDMARK|A(NIMATION|LL))|D(EBUG_CHANNEL|ATA_(RATING|BORN|SIM_(RATING|STATUS|POS)|NAME|ONLINE|PAYINFO))|P(RIM_(ROTATION|MATERIAL(_(RUBBER|GLASS|METAL|STONE|PLASTIC|FLESH|WOOD|LIGHT))?|BUMP_(GRAVEL|B(RI(GHT|CKS)|LOBS|ARK)|S(HINY|T(ONE|UCCO)|IDING|UCTION)|NONE|C(HECKER|ONCRETE)|TILE|D(ISKS|ARK)|W(OOD|EAVE)|LARGETILE)|S(HINY_(MEDIUM|HIGH|NONE|LOW)|IZE)|HOLE_(SQUARE|CIRCLE|TRIANGLE|DEFAULT)|COLOR|T(YPE(_(RING|BOX|SPHERE|CYLINDER|T(ORUS|UBE)|PRISM))?|E(X(GEN_(DEFAULT|PLANAR)|TURE)|MP_ON_REZ))|P(H(YSICS|ANTOM)|O(SITION|INT_LIGHT))|FLEXIBLE)|SYS_(SRC_(MAX_AGE|BURST_(RA(TE|DIUS)|SPEED_M(IN|AX)|PART_COUNT)|T(EXTURE|ARGET_KEY)|INNERANGLE|O(MEGA|UTERANGLE)|PATTERN(_(DROP|EXPLODE|ANGLE(_CONE(_EMPTY)?)?))?|A(NGLE_(BEGIN|END)|CCEL))|PART_(MAX_AGE|BOUNCE_MASK|START_(SCALE|COLOR|ALPHA)|TARGET_(POS_MASK|LINEAR_MASK)|INTERP_(SCALE_MASK|COLOR_MASK)|E(MISSIVE_MASK|ND_(SCALE|COLOR|ALPHA))|F(OLLOW_(SRC_MASK|VELOCITY_MASK)|LAGS)|WIND_MASK))|ING_PONG|ERM(_(MO(DIFY|VE)|COPY|TRANSFER|ALL)|ISSION_(C(HANGE_LINKS|ONTROL_CAMERA)|T(R(IGGER_ANIMATION|ACK_CAMERA)|AKE_CONTROLS)|DEBIT|ATTACH))|A(RCEL_(MEDIA_COMMAND_(STOP|T(IME|EXTURE)|U(RL|NLOAD)|P(LAY|AUSE)|LOOP|A(GENT|UTO_ALIGN))|COUNT_(GROUP|SELECTED|T(OTAL|EMP)|O(THER|WNER))|DETAILS_(GROUP|NAME|OWNER|DESC|AREA)|FLAG_(RESTRICT_PUSHOBJECT|USE_(BAN_LIST|LAND_PASS_LIST|ACCESS_(GROUP|LIST))|LOCAL_SOUND_ONLY|ALLOW_(GROUP_(SCRIPTS|OBJECT_ENTRY)|SCRIPTS|CREATE_OBJECTS|TERRAFORM|DAMAGE|FLY|LANDMARK|ALL_OBJECT_ENTRY)))|SSIVE|Y(MENT_INFO_(ON_FILE|USED)|_(HIDE|DEFAULT))))|VEHICLE_(REFERENCE_FRAME|B(UOYANCY|ANKING_(MIX|TIMESCALE|EFFICIENCY))|HOVER_(HEIGHT|TIMESCALE|EFFICIENCY)|TYPE_(B(OAT|ALLOON)|SLED|NONE|CAR|AIRPLANE)|VERTICAL_ATTRACTION_(TIMESCALE|EFFICIENCY)|FLAG_(MOUSELOOK_(BANK|STEER)|HOVER_(GLOBAL_HEIGHT|TERRAIN_ONLY|UP_ONLY|WATER_ONLY)|NO_DEFLECTION_UP|CAMERA_DECOUPLED|LIMIT_(ROLL_ONLY|MOTOR_UP))|LINEAR_(MOTOR_(TIMESCALE|OFFSET|D(IRECTION|ECAY_TIMESCALE))|DEFLECTION_(TIMESCALE|EFFICIENCY)|FRICTION_TIMESCALE)|ANGULAR_(MOTOR_(TIMESCALE|D(IRECTION|ECAY_TIMESCALE))|DEFLECTION_(TIMESCALE|EFFICIENCY)|FRICTION_TIMESCALE))|L(I(ST_STAT_(RANGE|GEOMETRIC_MEAN|M(IN|E(DIAN|AN)|AX)|S(TD_DEV|UM(_SQUARES)?)|NUM_COUNT)|NK_(ROOT|SET|THIS|ALL_(CHILDREN|OTHERS)))|OOP|AND_(R(EVERT|AISE)|MEDIUM_BRUSH|SM(OOTH|ALL_BRUSH)|NOISE|L(OWER|EVEL|ARGE_BRUSH)))|A(GENT(_(MOUSELOOK|BUSY|S(CRIPTED|ITTING)|CROUCHING|TYPING|IN_AIR|ON_OBJECT|FLYING|WALKING|A(TTACHMENTS|WAY|LWAYS_RUN)))?|NIM_ON|CTIVE|TTACH_(R(SHOULDER|H(IP|AND)|U(LEG|ARM)|PEC|E(YE|AR)|FOOT|L(LEG|ARM))|MOUTH|B(ELLY|ACK)|HEAD|NOSE|CH(IN|EST)|PELVIS|L(SHOULDER|H(IP|AND)|U(LEG|ARM)|PEC|E(YE|AR)|FOOT|L(LEG|ARM)))|LL_SIDES))\b</string>
+			<string>\b(ACTIVE|AGENT|AGENT_ALWAYS_RUN|AGENT_ATTACHMENTS|AGENT_AWAY|AGENT_BUSY|AGENT_CROUCHING|AGENT_FLYING|AGENT_IN_AIR|AGENT_MOUSELOOK|AGENT_ON_OBJECT|AGENT_SCRIPTED|AGENT_SITTING|AGENT_TYPING|AGENT_WALKING|ALL_SIDES|ANIM_ON|ATTACH_BACK|ATTACH_BELLY|ATTACH_CHEST|ATTACH_CHIN|ATTACH_HEAD|ATTACH_LEAR|ATTACH_LEYE|ATTACH_LFOOT|ATTACH_LHAND|ATTACH_LHIP|ATTACH_LLARM|ATTACH_LLLEG|ATTACH_LPEC|ATTACH_LSHOULDER|ATTACH_LUARM|ATTACH_LULEG|ATTACH_MOUTH|ATTACH_NOSE|ATTACH_PELVIS|ATTACH_REAR|ATTACH_REYE|ATTACH_RFOOT|ATTACH_RHAND|ATTACH_RHIP|ATTACH_RLARM|ATTACH_RLLEG|ATTACH_RPEC|ATTACH_RSHOULDER|ATTACH_RUARM|ATTACH_RULEG|CAMERA_ACTIVE|CAMERA_BEHINDNESS_ANGLE|CAMERA_BEHINDNESS_LAG|CAMERA_DISTANCE|CAMERA_FOCUS|CAMERA_FOCUS_LAG|CAMERA_FOCUS_LOCKED|CAMERA_FOCUS_OFFSET|CAMERA_FOCUS_THRESHOLD|CAMERA_PITCH|CAMERA_POSITION|CAMERA_POSITION_LAG|CAMERA_POSITION_LOCKED|CAMERA_POSITION_THRESHOLD|CHANGED_ALLOWED_DROP|CHANGED_COLOR|CHANGED_INVENTORY|CHANGED_LINK|CHANGED_OWNER|CHANGED_REGION|CHANGED_SCALE|CHANGED_SHAPE|CHANGED_TELEPORT|CHANGED_TEXTURE|CONTROL_BACK|CONTROL_DOWN|CONTROL_FWD|CONTROL_LBUTTON|CONTROL_LEFT|CONTROL_ML_LBUTTON|CONTROL_RIGHT|CONTROL_ROT_LEFT|CONTROL_ROT_RIGHT|CONTROL_UP|DATA_BORN|DATA_NAME|DATA_ONLINE|DATA_RATING|DATA_SIM_POS|DATA_SIM_RATING|DATA_SIM_STATUS|DEBUG_CHANNEL|DEG_TO_RAD|EOF|FALSE|HTTP_BODY_MAXLENGTH|HTTP_BODY_TRUNCATED|HTTP_METHOD|HTTP_MIMETYPE|INVENTORY_ALL|INVENTORY_ANIMATION|INVENTORY_BODYPART|INVENTORY_CLOTHING|INVENTORY_GESTURE|INVENTORY_LANDMARK|INVENTORY_NONE|INVENTORY_NOTECARD|INVENTORY_OBJECT|INVENTORY_SCRIPT|INVENTORY_SOUND|INVENTORY_TEXTURE|LAND_LARGE_BRUSH|LAND_LEVEL|LAND_LOWER|LAND_MEDIUM_BRUSH|LAND_NOISE|LAND_RAISE|LAND_REVERT|LAND_SMALL_BRUSH|LAND_SMOOTH|LINK_ALL_CHILDREN|LINK_ALL_OTHERS|LINK_ROOT|LINK_SET|LINK_THIS|LIST_STAT_GEOMETRIC_MEAN|LIST_STAT_MAX|LIST_STAT_MEAN|LIST_STAT_MEDIAN|LIST_STAT_MIN|LIST_STAT_NUM_COUNT|LIST_STAT_RANGE|LIST_STAT_STD_DEV|LIST_STAT_SUM|LIST_STAT_SUM_SQUARES|LOOP|MASK_BASE|MASK_EVERYONE|MASK_GROUP|MASK_NEXT|MASK_OWNER|NULL_KEY|PARCEL_FLAG_ALLOW_CREATE_OBJECTS|PARCEL_FLAG_ALLOW_DAMAGE|PARCEL_FLAG_ALLOW_FLY|PARCEL_FLAG_ALLOW_LANDMARK|PARCEL_FLAG_ALLOW_SCRIPTS|PARCEL_FLAG_ALLOW_TERRAFORM|PARCEL_FLAG_LOCAL_SOUND_ONLY|PARCEL_FLAG_USE_ACCESS_GROUP|PARCEL_FLAG_USE_ACCESS_LIST|PARCEL_FLAG_USE_BAN_LIST|PARCEL_FLAG_USE_LAND_PASS_LIST|PARCEL_MEDIA_COMMAND_AGENT|PARCEL_MEDIA_COMMAND_AUTO_ALIGN|PARCEL_MEDIA_COMMAND_LOOP|PARCEL_MEDIA_COMMAND_PAUSE|PARCEL_MEDIA_COMMAND_PLAY|PARCEL_MEDIA_COMMAND_STOP|PARCEL_MEDIA_COMMAND_TEXTURE|PARCEL_MEDIA_COMMAND_TIME|PARCEL_MEDIA_COMMAND_UNLOAD|PARCEL_MEDIA_COMMAND_URL|PASSIVE|PAY_DEFAULT|PAY_HIDE|PERM_ALL|PERM_COPY|PERM_MODIFY|PERM_MOVE|PERM_TRANSFER|PERMISSION_ATTACH|PERMISSION_CHANGE_LINKS|PERMISSION_CONTROL_CAMERA|PERMISSION_DEBIT|PERMISSION_TAKE_CONTROLS|PERMISSION_TRACK_CAMERA|PERMISSION_TRIGGER_ANIMATION|PI|PI_BY_TWO|PING_PONG|PRIM_BUMP_BARK|PRIM_BUMP_BLOBS|PRIM_BUMP_BRICKS|PRIM_BUMP_BRIGHT|PRIM_BUMP_CHECKER|PRIM_BUMP_CONCRETE|PRIM_BUMP_DARK|PRIM_BUMP_DISKS|PRIM_BUMP_GRAVEL|PRIM_BUMP_LARGETILE|PRIM_BUMP_NONE|PRIM_BUMP_SHINY|PRIM_BUMP_SIDING|PRIM_BUMP_STONE|PRIM_BUMP_STUCCO|PRIM_BUMP_SUCTION|PRIM_BUMP_TILE|PRIM_BUMP_WEAVE|PRIM_BUMP_WOOD|PRIM_CAST_SHADOWS|PRIM_COLOR|PRIM_FLEXIBLE|PRIM_FULLBRIGHT|PRIM_HOLE_CIRCLE|PRIM_HOLE_DEFAULT|PRIM_HOLE_SQUARE|PRIM_HOLE_TRIANGLE|PRIM_MATERIAL|PRIM_MATERIAL_FLESH|PRIM_MATERIAL_GLASS|PRIM_MATERIAL_LIGHT|PRIM_MATERIAL_METAL|PRIM_MATERIAL_PLASTIC|PRIM_MATERIAL_RUBBER|PRIM_MATERIAL_STONE|PRIM_MATERIAL_WOOD|PRIM_PHANTOM|PRIM_PHYSICS|PRIM_POINT_LIGHT|PRIM_POSITION|PRIM_ROTATION|PRIM_SHINY_HIGH|PRIM_SHINY_LOW|PRIM_SHINY_MEDIUM|PRIM_SHINY_NONE|PRIM_SIZE|PRIM_TEMP_ON_REZ|PRIM_TEXGEN|PRIM_TEXGEN_DEFAULT|PRIM_TEXGEN_PLANAR|PRIM_TEXTURE|PRIM_TYPE|PRIM_TYPE_BOX|PRIM_TYPE_CYLINDER|PRIM_TYPE_PRISM|PRIM_TYPE_RING|PRIM_TYPE_SPHERE|PRIM_TYPE_TORUS|PRIM_TYPE_TUBE|PSYS_PART_BOUNCE_MASK|PSYS_PART_EMISSIVE_MASK|PSYS_PART_END_ALPHA|PSYS_PART_END_COLOR|PSYS_PART_END_SCALE|PSYS_PART_FLAGS|PSYS_PART_FOLLOW_SRC_MASK|PSYS_PART_FOLLOW_VELOCITY_MASK|PSYS_PART_INTERP_COLOR_MASK|PSYS_PART_INTERP_SCALE_MASK|PSYS_PART_MAX_AGE|PSYS_PART_START_ALPHA|PSYS_PART_START_COLOR|PSYS_PART_START_SCALE|PSYS_PART_TARGET_LINEAR_MASK|PSYS_PART_TARGET_POS_MASK|PSYS_PART_WIND_MASK|PSYS_SRC_ACCEL|PSYS_SRC_ANGLE_BEGIN|PSYS_SRC_ANGLE_END|PSYS_SRC_BURST_PART_COUNT|PSYS_SRC_BURST_RADIUS|PSYS_SRC_BURST_RATE|PSYS_SRC_BURST_SPEED_MAX|PSYS_SRC_BURST_SPEED_MIN|PSYS_SRC_INNERANGLE|PSYS_SRC_MAX_AGE|PSYS_SRC_OMEGA|PSYS_SRC_OUTERANGLE|PSYS_SRC_PATTERN|PSYS_SRC_PATTERN_ANGLE|PSYS_SRC_PATTERN_ANGLE_CONE|PSYS_SRC_PATTERN_ANGLE_CONE_EMPTY|PSYS_SRC_PATTERN_DROP|PSYS_SRC_PATTERN_EXPLODE|PSYS_SRC_TARGET_KEY|PSYS_SRC_TEXTURE|PUBLIC_CHANNEL|RAD_TO_DEG|REGION_FLAG_ALLOW_DAMAGE|REGION_FLAG_ALLOW_DIRECT_TELEPORT|REGION_FLAG_BLOCK_FLY|REGION_FLAG_BLOCK_TERRAFORM|REGION_FLAG_DISABLE_COLLISIONS|REGION_FLAG_DISABLE_PHYSICS|REGION_FLAG_FIXED_SUN|REGION_FLAG_SANDBOX|REMOTE_DATA_CHANNEL|REMOTE_DATA_REPLY|REMOTE_DATA_REQUEST|REVERSE|ROTATE|SCALE|SCRIPTED|SMOOTH|SQRT2|STATUS_BLOCK_GRAB|STATUS_CAST_SHADOWS|STATUS_DIE_AT_EDGE|STATUS_PHANTOM|STATUS_PHYSICS|STATUS_RETURN_AT_EDGE|STATUS_ROTATE_X|STATUS_ROTATE_Y|STATUS_ROTATE_Z|STATUS_SANDBOX|TRUE|TWO_PI|TYPE_FLOAT|TYPE_INTEGER|TYPE_INVALID|TYPE_KEY|TYPE_ROTATION|TYPE_STRING|TYPE_VECTOR|VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY|VEHICLE_ANGULAR_DEFLECTION_TIMESCALE|VEHICLE_ANGULAR_FRICTION_TIMESCALE|VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE|VEHICLE_ANGULAR_MOTOR_DIRECTION|VEHICLE_ANGULAR_MOTOR_TIMESCALE|VEHICLE_BANKING_EFFICIENCY|VEHICLE_BANKING_MIX|VEHICLE_BANKING_TIMESCALE|VEHICLE_BUOYANCY|VEHICLE_FLAG_CAMERA_DECOUPLED|VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT|VEHICLE_FLAG_HOVER_TERRAIN_ONLY|VEHICLE_FLAG_HOVER_UP_ONLY|VEHICLE_FLAG_HOVER_WATER_ONLY|VEHICLE_FLAG_LIMIT_MOTOR_UP|VEHICLE_FLAG_LIMIT_ROLL_ONLY|VEHICLE_FLAG_MOUSELOOK_BANK|VEHICLE_FLAG_MOUSELOOK_STEER|VEHICLE_FLAG_NO_DEFLECTION_UP|VEHICLE_HOVER_EFFICIENCY|VEHICLE_HOVER_HEIGHT|VEHICLE_HOVER_TIMESCALE|VEHICLE_LINEAR_DEFLECTION_EFFICIENCY|VEHICLE_LINEAR_DEFLECTION_TIMESCALE|VEHICLE_LINEAR_FRICTION_TIMESCALE|VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE|VEHICLE_LINEAR_MOTOR_DIRECTION|VEHICLE_LINEAR_MOTOR_OFFSET|VEHICLE_LINEAR_MOTOR_TIMESCALE|VEHICLE_REFERENCE_FRAME|VEHICLE_TYPE_AIRPLANE|VEHICLE_TYPE_BALLOON|VEHICLE_TYPE_BOAT|VEHICLE_TYPE_CAR|VEHICLE_TYPE_NONE|VEHICLE_TYPE_SLED|VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY|VEHICLE_VERTICAL_ATTRACTION_TIMESCALE|ZERO_ROTATION|ZERO_VECTOR)\b</string>
 			<key>name</key>
 			<string>support.constant.lsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)|(\.[0-9]+)\b</string>
+			<string>\b\w+ *(?=\()</string>
 			<key>name</key>
-			<string>constant.numeric.lsl</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>name.functions.global.lsl</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(\b\w+)(?=\s*\()</string>
+			<string>entity.name.function.lsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -235,89 +98,247 @@
 		<dict>
 			<key>begin</key>
 			<string>"</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.lsl</string>
-				</dict>
-			</dict>
 			<key>end</key>
-			<string>"(?!$)</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.lsl</string>
-				</dict>
-			</dict>
+			<string>"</string>
 			<key>name</key>
 			<string>string.quoted.double.lsl</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\(\\|["nt])</string>
+					<string>\\[a-zA-Z]</string>
 					<key>name</key>
-					<string>constant.character.escape.lsl</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\\.</string>
-					<key>name</key>
-					<string>invalid.illegal.unknown-escape.lsl</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\s\s+</string>
-					<key>name</key>
-					<string>invalid.suspect.string.multiple.spaces.lsl</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>"$</string>
-					<key>name</key>
-					<string>invalid.suspect.string.line.end.lsl</string>
+					<string>constant.character.untitled</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(//)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.lsl</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>$</string>
-			<key>name</key>
-			<string>comment.line.double-slash.lsl</string>
+			<key>include</key>
+			<string>#leading-space</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>leading-space</key>
+		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key>
-					<string>\s+(?=$)</string>
+					<key>begin</key>
+					<string>^(?=(\t|  ))</string>
+					<key>end</key>
+					<string>(?=[^\t\s])</string>
 					<key>name</key>
-					<string>invalid.suspect.comment.line.end.lsl</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>\s\s+</string>
-					<key>name</key>
-					<string>invalid.suspect.comment.multiple.spaces.lsl</string>
+					<string>meta.leading-tabs</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group1.spaces</string>
+								</dict>
+								<key>10</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group10.spaces</string>
+								</dict>
+								<key>11</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group11.spaces</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group2.spaces</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group3.spaces</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group4.spaces</string>
+								</dict>
+								<key>5</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group5.spaces</string>
+								</dict>
+								<key>6</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group6.spaces</string>
+								</dict>
+								<key>7</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group7.spaces</string>
+								</dict>
+								<key>8</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group8.spaces</string>
+								</dict>
+								<key>9</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group9.spaces</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>(  )(  )?(  )?(  )?(  )?(  )?(  )?(  )?(  )?(  )?(  )?</string>
+						</dict>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group1.tab</string>
+								</dict>
+								<key>10</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group10.tab</string>
+								</dict>
+								<key>11</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group11.tab</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group2.tab</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group3.tab</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group4.tab</string>
+								</dict>
+								<key>5</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group5.tab</string>
+								</dict>
+								<key>6</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group6.tab</string>
+								</dict>
+								<key>7</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group7.tab</string>
+								</dict>
+								<key>8</key>
+								<dict>
+									<key>name</key>
+									<string>meta.even-tab.group8.tab</string>
+								</dict>
+								<key>9</key>
+								<dict>
+									<key>name</key>
+									<string>meta.odd-tab.group9.tab</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>(\t)(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
-	</array>
+		<key>round-brackets</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(\{)</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>meta.brace.curly</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(\}\n?)</string>
+					<key>name</key>
+					<string>meta.group.braces.curly</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$base</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\()</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>meta.brace.round</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(\))</string>
+					<key>name</key>
+					<string>meta.group.braces.round</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$base</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\[)</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>meta.brace.square</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(\])</string>
+					<key>name</key>
+					<string>meta.group.braces.square</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$base</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.lsl</string>
 	<key>uuid</key>
-	<string>EC2F6643-D6CB-4853-8D1A-1A9033799138</string>
+	<string>21B2E01B-B911-4B99-975E-4787BEAE6697</string>
 </dict>
 </plist>
