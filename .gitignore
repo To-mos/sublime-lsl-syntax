@@ -1,1 +1,3 @@
 *.tmLanguage.cache
+*.tmPreferences.cache
+*.cache
