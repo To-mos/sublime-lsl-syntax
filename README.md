@@ -16,9 +16,9 @@ Please follow the installation instructions on the page and then restart Sublime
 
 The `sublime-text-2-lsl` plugin is not, by default, available in Package Control, so we need to add it.
 
-Open up Package Control in Sublime Text by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> and scroll down to the option `Package Control: Add Repository`
+Open up Package Control in Sublime Text by pressing <kbd>Ctrl+Shift+P</kbd>(windows) or <kbd>⌘+Shift+P</kbd>(mac) and scroll down to the option `Package Control: Add Repository`
 
-When you click on the `Add Repository` option, a textbox will open at the bottom of the Sublime Text window.  Enter the name of this repository without the .git extension: `https://github.com/JKolya/sublime-text-2-lsl`
+When you click on the `Add Repository` option, a textbox will open at the bottom of the Sublime Text window.  Enter the name of this repository without the .git extension: `https://github.com/To-mos/sublime-text-2-lsl`
 
 Press enter.
 
@@ -26,7 +26,7 @@ Press enter.
 
 Now we've added `sublime-text-2-lsl` to our list of available packages, but we haven't installed it yet.
 
-Re-open Package Control by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> and scrolling down to `Package Control: Install Package`.
+Re-open Package Control by pressing <kbd>Ctrl+Shift+P</kbd>(windows) or <kbd>⌘+Shift+P</kbd>(mac) and scrolling down to `Package Control: Install Package`.
 
 Search for the package `sublime-text-2-lsl` and double click on it.
 
@@ -36,7 +36,7 @@ That's it, `sublime-text-2-lsl` is installed and ready to go. No restart of Subl
 
 You can locate your Sublime Text `Packages` directory. When inside the `Packages` directory type:
 
-`git clone https://github.com/JKolya/sublime-text-2-lsl.git sublime-text-2-lsl`
+`git clone https://github.com/To-mos/sublime-text-2-lsl sublime-text-2-lsl`
 
 Restart Sublime Text and the package is installed.
 
