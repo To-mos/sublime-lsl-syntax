@@ -1,17 +1,11 @@
 [
 	{"command": "move_to", "args": {"to": "hardbol"}},
 	{
-		"args":
-		{
-			"characters": "// comment here"
-		},
+		"args":{"characters": "// comment here"},
 		"command": "insert"
 	},
 	{
-		"args":
-		{
-			"characters": "\n"
-		},
+		"args":{"characters": "\n"},
 		"command": "insert"
 	}
 ]

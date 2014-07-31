@@ -16,9 +16,22 @@
 				<key>value</key>
 				<string>// </string>
 			</dict>
+			<dict>
+	       <key>name</key>
+	       <string>TM_COMMENT_START_2</string>
+	       <key>value</key>
+	       <string>/*</string>
+	    </dict>
+	    <dict>
+	       <key>name</key>
+	       <string>TM_COMMENT_END_2</string>
+	       <key>value</key>
+	       <string>*/</string>
+	     </dict>
 		</array>
 	</dict>
 	<key>uuid</key>
 	<string>64FCAF72-3B03-4C40-B4FD-9ADBEA9224BB</string>
 </dict>
 </plist>
+
