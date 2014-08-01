@@ -411,6 +411,7 @@
 			<string>listen(integer channel, string name, key id, string message)</string>
 			<string>llAbs((integer) val)</string>
 			<string>llAcos((float) val)</string>
+					<string>llAddToLandBanList()</string>
 			<string>llAddToLandPassList((key) avatar, (float) hours)</string>
 			<string>llAdjustSoundVolume((float) volume)</string>
 			<string>llAllowInventoryDrop((integer) add)</string>
@@ -420,22 +421,30 @@
 			<string>llAsin((float) val)</string>
 			<string>llAtan2((float) y, (float) x)</string>
 			<string>llAttachToAvatar((key) avatar, (integer) attachment)</string>
+					<string>llAttachToAvatarTemp()</string>
+					<string>llAvatarOnLinkSitTarget()</string>
 			<string>llAvatarOnSitTarget()</string>
 			<string>llAxes2Rot((vector) fwd, (vector) left, (vector) up)</string>
 			<string>llAxisAngle2Rot((vector) axis, (float) angle)</string>
+					<string>llBase64ToInteger()</string>
 			<string>llBase64ToString((string) str)</string>
 			<string>llBreakAllLinks()</string>
 			<string>llBreakLink((integer) linknum)</string>
-			<string>llCSV2List((string) src)</string>
+					<string>llCastRay((vector) start, (vector) end, (list) options)</string>
 			<string>llCeil((float) val)</string>
 			<string>llClearCameraParams()</string>
+					<string>llClearLinkMedia()</string>
+					<string>llClearPrimMedia()</string>
 			<string>llCloseRemoteDataChannel((key) channel)</string>
 			<string>llCloud((vector) offset)</string>
 			<string>llCollisionFilter((string) name, (key) id, (integer) accept)</string>
 			<string>llCollisionSound((string) impact_sound, (float) impact_volume)</string>
 			<string>llCollisionSprite((string) impact_sprite)</string>
 			<string>llCos((float) theta)</string>
+					<string>llCreateCharacter()</string>
 			<string>llCreateLink((key) target, (integer) parent)</string>
+			<string>llCSV2List((string) src)</string>
+					<string>llDeleteCharacter()</string>
 			<string>llDeleteSubList((list) src, (integer) start, (integer) end)</string>
 			<string>llDeleteSubString((string) src, (integer) start, (integer) end)</string>
 			<string>llDetachFromAvatar((key) avatar)</string>
@@ -447,6 +456,12 @@
 			<string>llDetectedOwner((integer) number)</string>
 			<string>llDetectedPos((integer) number)</string>
 			<string>llDetectedRot((integer) number)</string>
+					<string>llDetectedTouchBinormal()</string>
+					<string>llDetectedTouchFace()</string>
+					<string>llDetectedTouchNormal()</string>
+					<string>llDetectedTouchPos()</string>
+					<string>llDetectedTouchST()</string>
+					<string>llDetectedTouchUV()</string>
 			<string>llDetectedType((integer) number)</string>
 			<string>llDetectedVel((integer) number)</string>
 			<string>llDialog((key) avatar, (string) message, (list) buttons, (integer) channel)</string>
@@ -457,30 +472,41 @@
 			<string>llEmail((string) address, (string) subject, (string) message)</string>
 			<string>llEscapeURL((string) url)</string>
 			<string>llEuler2Rot((vector) vec)</string>
+					<string>llEvade()</string>
+					<string>llExecCharacterCmd()</string>
 			<string>llFabs((float) val)</string>
+					<string>llFleeFrom()</string>
 			<string>llFloor((float) val)</string>
 			<string>llForceMouselook((integer) mouselook)</string>
 			<string>llFrand((float) mag)</string>
+					<string>llGenerateKey()</string>
 			<string>llGetAccel()</string>
 			<string>llGetAgentInfo((key) id)</string>
+					<string>llGetAgentLanguage()</string>
+					<string>llGetAgentList()</string>
 			<string>llGetAgentSize((key) id)</string>
 			<string>llGetAlpha((integer) face)</string>
 			<string>llGetAndResetTime()</string>
 			<string>llGetAnimation((key) id)</string>
 			<string>llGetAnimationList((key) id)</string>
+					<string>llGetAnimationOverride()</string>
 			<string>llGetAttached()</string>
 			<string>llGetBoundingBox((key) object)</string>
 			<string>llGetCameraPos()</string>
 			<string>llGetCameraRot()</string>
 			<string>llGetCenterOfMass()</string>
+					<string>llGetClosestNavPoint()</string>
 			<string>llGetColor((integer) face)</string>
 			<string>llGetCreator()</string>
 			<string>llGetDate()</string>
 			<string>llGetEnergy()</string>
+					<string>llGetEnv()</string>
 			<string>llGetForce()</string>
 			<string>llGetFreeMemory()</string>
-			<string>llGetGMTclock()</string>
+					<string>llGetFreeURLs()</string>
 			<string>llGetGeometricCenter()</string>
+			<string>llGetGMTclock()</string>
+					<string>llGetHTTPHeader()</string>
 			<string>llGetInventoryCreator((string) name)</string>
 			<string>llGetInventoryKey((string) name)</string>
 			<string>llGetInventoryName((integer) type, (integer) number)</string>
@@ -490,19 +516,27 @@
 			<string>llGetKey()</string>
 			<string>llGetLandOwnerAt((vector) pos)</string>
 			<string>llGetLinkKey((integer) linknum)</string>
+					<string>llGetLinkMedia()</string>
 			<string>llGetLinkName((integer) linknum)</string>
 			<string>llGetLinkNumber()</string>
+					<string>llGetLinkNumberOfSides()</string>
+					<string>llGetLinkPrimitiveParams()</string>
 			<string>llGetListEntryType((list) src, (integer) index)</string>
 			<string>llGetListLength((list) src)</string>
 			<string>llGetLocalPos()</string>
 			<string>llGetLocalRot()</string>
 			<string>llGetMass()</string>
+					<string>llGetMassMKS()</string>
+					<string>llGetMaxScaleFactor()</string>
+					<string>llGetMemoryLimit()</string>
+					<string>llGetMinScaleFactor()</string>
 			<string>llGetNextEmail((string) address, (string) subject)</string>
 			<string>llGetNotecardLine((string) name, (integer) line)</string>
 			<string>llGetNumberOfNotecardLines((string) name)</string>
 			<string>llGetNumberOfPrims()</string>
 			<string>llGetNumberOfSides()</string>
 			<string>llGetObjectDesc()</string>
+					<string>llGetObjectDetails()</string>
 			<string>llGetObjectMass((key) id)</string>
 			<string>llGetObjectName()</string>
 			<string>llGetObjectPermMask((integer) mask)</string>
@@ -513,15 +547,19 @@
 			<string>llGetParcelDetails((vector) pos, (list) details)</string>
 			<string>llGetParcelFlags((vector) pos)</string>
 			<string>llGetParcelMaxPrims((vector) pos, (integer) sim_wide)</string>
+					<string>llGetParcelMusicURL()</string>
 			<string>llGetParcelPrimCount((vector) pos, (integer) category, (integer) sim_wide)</string>
 			<string>llGetParcelPrimOwners((vector) pos)</string>
 			<string>llGetPermissions()</string>
 			<string>llGetPermissionsKey()</string>
+					<string>llGetPhysicsMaterial()</string>
 			<string>llGetPos()</string>
 			<string>llGetPrimitiveParams((list) parameters)</string>
+					<string>llGetPrimMediaParams()</string>
+					<string>llGetRegionAgentCount()</string>
 			<string>llGetRegionCorner()</string>
-			<string>llGetRegionFPS()</string>
 			<string>llGetRegionFlags()</string>
+			<string>llGetRegionFPS()</string>
 			<string>llGetRegionName()</string>
 			<string>llGetRegionTimeDilation()</string>
 			<string>llGetRootPosition()</string>
@@ -530,7 +568,11 @@
 			<string>llGetScale()</string>
 			<string>llGetScriptName()</string>
 			<string>llGetScriptState((string) name)</string>
+					<string>llGetSimStats()</string>
+					<string>llGetSimulatorHostname()</string>
+					<string>llGetSPMaxMemory()</string>
 			<string>llGetStartParameter()</string>
+					<string>llGetStaticPath()</string>
 			<string>llGetStatus((integer) status)</string>
 			<string>llGetSubString((string) src, (integer) start, (integer) end)</string>
 			<string>llGetSunDirection()</string>
@@ -543,11 +585,14 @@
 			<string>llGetTimestamp()</string>
 			<string>llGetTorque()</string>
 			<string>llGetUnixTime()</string>
+					<string>llGetUsedMemory()</string>
+					<string>llGetUsername()</string>
 			<string>llGetVel()</string>
 			<string>llGetWallclock()</string>
 			<string>llGiveInventory((key) destination, (string) inventory)</string>
 			<string>llGiveInventoryList((key) destination, (string) category, (list) inventory)</string>
 			<string>llGiveMoney((key) destination, (integer) amount)</string>
+					<string>llGodLikeRezObject()</string>
 			<string>llGround((vector) offset)</string>
 			<string>llGroundContour((vector) offset)</string>
 			<string>llGroundNormal((vector) offset)</string>
@@ -556,25 +601,33 @@
 			<string>llHTTPRequest((string) url, (list) parameters, (string) body)</string>
 			<string>llInsertString((string) dst, (integer) position, (string) src)</string>
 			<string>llInstantMessage((key) user, (string) message)</string>
+					<string>llIntegerToBase64()</string>
+					<string>llJson2List()</string>
+					<string>llJsonGetValue()</string>
+					<string>llJsonSetValue()</string>
+					<string>llJsonValueType()</string>
 			<string>llKey2Name((key) id)</string>
+					<string>llLinkParticleSystem()</string>
+					<string>llLinkSitTarget()</string>
 			<string>llList2CSV((list) src)</string>
 			<string>llList2Float((list) src, (integer) index)</string>
 			<string>llList2Integer((list) src, (integer) index)</string>
+			 		<string>llList2Json()</string>
 			<string>llList2Key((list) src, (integer) index)</string>
 			<string>llList2List((list) src, (integer) start, (integer) end)</string>
 			<string>llList2ListStrided((list) src, (integer) start, (integer) end, (integer) stride)</string>
 			<string>llList2Rot((list) src, (integer) index)</string>
 			<string>llList2String((list) src, (integer) index)</string>
 			<string>llList2Vector((list) src, (integer) index)</string>
+			<string>llListen((integer) channel, (string) name, (key) id, (string) msg)</string>
+			<string>llListenControl((integer) number, (integer) active)</string>
+			<string>llListenRemove((integer) number)</string>
 			<string>llListFindList((list) src, (list) test)</string>
 			<string>llListInsertList((list) dest, (list) src, (integer) pos)</string>
 			<string>llListRandomize((list) src, (integer) stride)</string>
 			<string>llListReplaceList((list) dest, (list) src, (integer) start, (integer) end)</string>
 			<string>llListSort((list) src, (integer) stride, (integer) ascending)</string>
 			<string>llListStatistics((integer) operation, (list) input)</string>
-			<string>llListen((integer) channel, (string) name, (key) id, (string) msg)</string>
-			<string>llListenControl((integer) number, (integer) active)</string>
-			<string>llListenRemove((integer) number)</string>
 			<string>llLoadURL((key) avatar_id, (string) message, (string) url)</string>
 			<string>llLog((float) val)</string>
 			<string>llLog10((float) val)</string>
@@ -582,16 +635,19 @@
 			<string>llLoopSound((string) sound, (float) volume)</string>
 			<string>llLoopSoundMaster((string) sound, (float) volume)</string>
 			<string>llLoopSoundSlave((string) sound, (float) volume)</string>
-			<string>llMD5String((string) str, (integer) nonce)</string>
 			<string>llMakeExplosion((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
 			<string>llMakeFire((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
 			<string>llMakeFountain((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
 			<string>llMakeSmoke((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
+					<string>llManageEstateAccess()</string>
+					<string>llMapDestination()</string>
+			<string>llMD5String((string) str, (integer) nonce)</string>
 			<string>llMessageLinked((integer) linknum, (integer) num, (string) str, (key) id)</string>
 			<string>llMinEventDelay((float) delay)</string>
-			<string>llModPow((integer) a, (integer) b, (integer) c)</string>
 			<string>llModifyLand((integer) action, (integer) size)</string>
+			<string>llModPow((integer) a, (integer) b, (integer) c)</string>
 			<string>llMoveToTarget((vector) target, (float) tau)</string>
+					<string>llNavigateTo()</string>
 			<string>llOffsetTexture((float) offset_s, (float) offset_t, (integer) face)</string>
 			<string>llOpenRemoteDataChannel()</string>
 			<string>llOverMyLand((key) id)</string>
@@ -603,27 +659,44 @@
 			<string>llParticleSystem((list) parameters)</string>
 			<string>llPassCollisions((integer) pass)</string>
 			<string>llPassTouches((integer) pass)</string>
+					<string>llPatrolPoints()</string>
 			<string>llPlaySound((string) sound, (float) volume)</string>
 			<string>llPlaySoundSlave((string) sound, (float) volume)</string>
 			<string>llPointAt((vector) pos)</string>
 			<string>llPow((float) base, (float) exp)</string>
 			<string>llPreloadSound((string) sound)</string>
+					<string>llPursue()</string>
 			<string>llPushObject((key) id, (vector) impulse, (vector) angular_impulse, (integer) local)</string>
+					<string>llRefreshPrimURL()</string>
 			<string>llRegionSay((integer) channel, (string) msg)</string>
+					<string>llRegionSayTo()</string>
+					<string>llReleaseCamera()</string>
 			<string>llReleaseControls((key) avatar)</string>
+					<string>llReleaseURL()</string>
 			<string>llRemoteDataReply((key) channel, (key) message_id, (string) sdata)</string>
 			<string>llRemoteDataSetRegion()</string>
 			<string>llRemoteLoadScript()</string>
 			<string>llRemoteLoadScriptPin((key) target, (string) name, (integer) pin, (integer) running, (integer) param)</string>
+					<string>llRemoveFromLandBanList()</string>
+					<string>llRemoveFromLandPassList()</string>
 			<string>llRemoveInventory((string) inventory)</string>
 			<string>llRemoveVehicleFlags((integer) flags)</string>
 			<string>llRequestAgentData((key) id, (integer) data)</string>
+					<string>llRequestDisplayName()</string>
 			<string>llRequestInventoryData((string) name)</string>
 			<string>llRequestPermissions((key) avatar, (integer) perm)</string>
+					<string>llRequestSecureURL()</string>
 			<string>llRequestSimulatorData((string) sim_name, (integer) data)</string>
+					<string>llRequestURL()</string>
+					<string>llRequestUsername()</string>
+					<string>llResetAnimationOverride()</string>
+					<string>llResetLandBanList()</string>
+					<string>llResetLandPassList()</string>
 			<string>llResetOtherScript((string) name)</string>
 			<string>llResetScript()</string>
 			<string>llResetTime()</string>
+					<string>llReturnObjectsByID()</string>
+					<string>llReturnObjectsByOwner()</string>
 			<string>llRezAtRoot((string) inventory, (vector) pos, (vector) vel, (rotation) rot, (integer) param)</string>
 			<string>llRezObject((string) inventory, (vector) pos, (vector) vel, (rotation) rot, (integer) param)</string>
 			<string>llRot2Angle((rotation) rot)</string>
@@ -632,6 +705,7 @@
 			<string>llRot2Fwd((rotation) rot)</string>
 			<string>llRot2Left((rotation) rot)</string>
 			<string>llRot2Up((rotation) rot)</string>
+					<string>llRotateTexture()</string>
 			<string>llRotBetween((vector) a, (vector) b)</string>
 			<string>llRotLookAt((rotation) rot, (float) strength, (float) damping)</string>
 			<string>llRotTarget((rotation) rot, (float) error)</string>
@@ -640,39 +714,57 @@
 			<string>llRound((float) val)</string>
 			<string>llSameGroup((key) id)</string>
 			<string>llSay((integer) channel, (string) text)</string>
+					<string>llScaleByFactor()</string>
 			<string>llScaleTexture((integer) scale_s, (integer) scale_t, (integer) face)</string>
 			<string>llScriptDanger((vector) pos)</string>
+					<string>llScriptProfiler()</string>
 			<string>llSendRemoteData((string) dest, (integer) idata, (string) sdata)</string>
 			<string>llSensor((string) name, (key) id, (integer) type, (float) range, (float) arc)</string>
 			<string>llSensorRemove()</string>
 			<string>llSensorRepeat((string) name, (key) id, (integer) type, (float) range, (float) arc, (float) rate)</string>
 			<string>llSetAlpha((float) alpha, (integer) face)</string>
+					<string>llSetAngularVelocity()</string>
+					<string>llSetAnimationOverride()</string>
 			<string>llSetBuoyancy((float) buoyancy)</string>
 			<string>llSetCameraAtOffset((vector) offset)</string>
 			<string>llSetCameraEyeOffset((vector) offset)</string>
 			<string>llSetCameraParams((list) rules)</string>
+					<string>llSetClickAction()</string>
 			<string>llSetColor((vector) color, (integer) face)</string>
+					<string>llSetContentType()</string>
 			<string>llSetDamage((float) damage)</string>
 			<string>llSetForce((vector) force, (integer) local)</string>
 			<string>llSetForceAndTorque((vector) force, (vector) torque, (integer) local)</string>
 			<string>llSetHoverHeight((float) height, (float) water, (float) tau)</string>
+					<string>llSetInventoryPermMask()</string>
+					<string>llSetKeyframedMotion()</string>
 			<string>llSetLinkAlpha((integer) linknumber, (float) alpha, (integer) face)</string>
+					<string>llSetLinkCamera()</string>
 			<string>llSetLinkColor((integer) linknumber, (vector) color, (integer) face)</string>
+			 		<string>llSetLinkMedia()</string>
 			<string>llSetLinkPrimitiveParams((integer) linknumber, (list) rules)</string>
+					<string>llSetLinkPrimitiveParamsFast()</string>
 			<string>llSetLinkTexture((integer) link_pos, (string) texture, (integer) face)</string>
 			<string>llSetLocalRot((rotation) rot)</string>
+					<string>llSetMemoryLimit()</string>
 			<string>llSetObjectDesc((string) description)</string>
 			<string>llSetObjectName((string) name)</string>
+					<string>llSetObjectPermMask()</string>
 			<string>llSetParcelMusicURL((string) url)</string>
 			<string>llSetPayPrice((integer) default_price, (list) quick_pay_buttons)</string>
+					<string>llSetPhysicsMaterial()</string>
 			<string>llSetPos((vector) pos)</string>
 			<string>llSetPrimitiveParams((list) rules)</string>
+					<string>llSetPrimMediaParams()</string>
+					<string>llSetPrimURL()</string>
+					<string>llSetRegionPos()</string>
 			<string>llSetRemoteScriptAccessPin((integer) pin)</string>
 			<string>llSetRot((rotation) rot)</string>
 			<string>llSetScale((vector) scale)</string>
 			<string>llSetScriptState((string) name, (integer) run)</string>
 			<string>llSetSitText((string) text)</string>
 			<string>llSetSoundQueueing((integer) queue)</string>
+					<string>llSetSoundRadius()</string>
 			<string>llSetStatus((integer) status, (integer) value)</string>
 			<string>llSetText((string) text, (vector) color, (float) alpha)</string>
 			<string>llSetTexture((string) texture, (integer) face)</string>
@@ -685,10 +777,14 @@
 			<string>llSetVehicleRotationParam((integer) param_name, (rotation) param_value)</string>
 			<string>llSetVehicleType((integer) type)</string>
 			<string>llSetVehicleVectorParam((integer) param_name, (vector) param_value)</string>
+					<string>llSetVelocity()</string>
+					<string>llSHA1String()</string>
 			<string>llShout((integer) channel, (string) text)</string>
 			<string>llSin((float) theta)</string>
 			<string>llSitTarget((vector) offset, (rotation) rot)</string>
 			<string>llSleep((float) sec)</string>
+					<string>llSound()</string>
+					<string>llSoundPreload()</string>
 			<string>llSqrt((float) val)</string>
 			<string>llStartAnimation((string) anim)</string>
 			<string>llStopAnimation((string) anim)</string>
@@ -701,25 +797,33 @@
 			<string>llStringToBase64((string) str)</string>
 			<string>llStringTrim((string) src, (integer) trim_type)</string>
 			<string>llSubStringIndex((string) source, (string) pattern)</string>
+					<string>llTakeCamera()</string>
 			<string>llTakeControls((integer) controls, (integer) accept, (integer) pass_on)</string>
 			<string>llTan((float) theta)</string>
 			<string>llTarget((vector) position, (float) range)</string>
 			<string>llTargetOmega((vector) axis, (float) spinrate, (float) gain)</string>
 			<string>llTargetRemove((integer) tnumber)</string>
+					<string>llTeleportAgent()</string>
+					<string>llTeleportAgentGlobalCoords()</string>
 			<string>llTeleportAgentHome((key) id)</string>
+					<string>llTextBox()</string>
 			<string>llToLower((string) src)</string>
 			<string>llToUpper((string) src)</string>
+					<string>llTransferLindenDollars()</string>
 			<string>llTriggerSound((string) sound, (float) volume)</string>
 			<string>llTriggerSoundLimited((string) sound, (float) volume, (vector) tne, (vector) bsw)</string>
-			<string>llUnSit((key) id)</string>
 			<string>llUnescapeURL((string) url)</string>
+			<string>llUnSit((key) id)</string>
+					<string>llUpdateCharacter()</string>
 			<string>llVecDist((vector) a, (vector) b)</string>
 			<string>llVecMag((vector) vec)</string>
 			<string>llVecNorm((vector) vec)</string>
 			<string>llVolumeDetect((integer) detect)</string>
+					<string>llWanderWithin()</string>
 			<string>llWater((vector) offset)</string>
 			<string>llWhisper((integer) channel, (string) text)</string>
 			<string>llWind((vector) offset)</string>
+					<string>llXorBase64()</string>
 			<string>llXorBase64Strings((string) s1, (string) s2)</string>
 			<string>llXorBase64StringsCorrect((string) s1, (string) s2)</string>
 			<string>money(key giver, integer amount)</string>
