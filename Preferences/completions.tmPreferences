@@ -597,9 +597,10 @@
 			<string>listen(integer channel, string name, key id, string message)</string>
 			<string>llAbs((integer) val)</string>
 			<string>llAcos((float) val)</string>
-					<string>llAddToLandBanList()</string>
+			<string>llAddToLandBanList((key) avatar, (float) hours)</string>
 			<string>llAddToLandPassList((key) avatar, (float) hours)</string>
 			<string>llAdjustSoundVolume((float) volume)</string>
+			<string>llAgentInExperience((key) agent)</string> 
 			<string>llAllowInventoryDrop((integer) add)</string>
 			<string>llAngleBetween((rotation) a, (rotation) b)</string>
 			<string>llApplyImpulse((vector) force, (integer) local)</string>
@@ -607,30 +608,33 @@
 			<string>llAsin((float) val)</string>
 			<string>llAtan2((float) y, (float) x)</string>
 			<string>llAttachToAvatar((key) avatar, (integer) attachment)</string>
-					<string>llAttachToAvatarTemp()</string>
-					<string>llAvatarOnLinkSitTarget()</string>
+			<string>llAttachToAvatarTemp((integer) attach_point)</string>
+			<string>llAvatarOnLinkSitTarget((integer) link)</string>
 			<string>llAvatarOnSitTarget()</string>
 			<string>llAxes2Rot((vector) fwd, (vector) left, (vector) up)</string>
 			<string>llAxisAngle2Rot((vector) axis, (float) angle)</string>
-					<string>llBase64ToInteger()</string>
+			<string>llBase64ToInteger((string) str)</string>
 			<string>llBase64ToString((string) str)</string>
 			<string>llBreakAllLinks()</string>
 			<string>llBreakLink((integer) linknum)</string>
-					<string>llCastRay((vector) start, (vector) end, (list) options)</string>
+			<string>llCastRay((vector) start, (vector) end, (list) options)</string>
 			<string>llCeil((float) val)</string>
 			<string>llClearCameraParams()</string>
-					<string>llClearLinkMedia()</string>
-					<string>llClearPrimMedia()</string>
+			<string>llClearLinkMedia((integer) link, (integer) face)</string>
+			<string>llClearPrimMedia((integer) face)</string>
 			<string>llCloseRemoteDataChannel((key) channel)</string>
 			<string>llCloud((vector) offset)</string>
 			<string>llCollisionFilter((string) name, (key) id, (integer) accept)</string>
 			<string>llCollisionSound((string) impact_sound, (float) impact_volume)</string>
 			<string>llCollisionSprite((string) impact_sprite)</string>
 			<string>llCos((float) theta)</string>
-					<string>llCreateCharacter()</string>
+			<string>llCreateCharacter((list) options)</string>
+			<string>llCreateKeyValue((string) key,(string) value)</string>
 			<string>llCreateLink((key) target, (integer) parent)</string>
 			<string>llCSV2List((string) src)</string>
-					<string>llDeleteCharacter()</string>
+			<string>llDataSizeKeyValue()</string>
+			<string>llDeleteCharacter()</string>
+			<string>llDeleteKeyValue((string) key)</string>
 			<string>llDeleteSubList((list) src, (integer) start, (integer) end)</string>
 			<string>llDeleteSubString((string) src, (integer) start, (integer) end)</string>
 			<string>llDetachFromAvatar((key) avatar)</string>
@@ -642,12 +646,12 @@
 			<string>llDetectedOwner((integer) number)</string>
 			<string>llDetectedPos((integer) number)</string>
 			<string>llDetectedRot((integer) number)</string>
-					<string>llDetectedTouchBinormal()</string>
-					<string>llDetectedTouchFace()</string>
-					<string>llDetectedTouchNormal()</string>
-					<string>llDetectedTouchPos()</string>
-					<string>llDetectedTouchST()</string>
-					<string>llDetectedTouchUV()</string>
+			<string>llDetectedTouchBinormal((integer) index)</string>
+			<string>llDetectedTouchFace((integer) index)</string>
+			<string>llDetectedTouchNormal((integer) index)</string>
+			<string>llDetectedTouchPos((integer) index)</string>
+			<string>llDetectedTouchST((integer) index)</string>
+			<string>llDetectedTouchUV((integer) index)</string>
 			<string>llDetectedType((integer) number)</string>
 			<string>llDetectedVel((integer) number)</string>
 			<string>llDialog((key) avatar, (string) message, (list) buttons, (integer) channel)</string>
@@ -658,8 +662,8 @@
 			<string>llEmail((string) address, (string) subject, (string) message)</string>
 			<string>llEscapeURL((string) url)</string>
 			<string>llEuler2Rot((vector) vec)</string>
-					<string>llEvade()</string>
-					<string>llExecCharacterCmd()</string>
+			<string>llEvade((key) target, (list) options)</string>
+			<string>llExecCharacterCmd((integer) command, (list) options)</string>
 			<string>llFabs((float) val)</string>
 					<string>llFleeFrom()</string>
 			<string>llFloor((float) val)</string>
