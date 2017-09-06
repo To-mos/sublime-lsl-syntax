@@ -59,6 +59,10 @@
 			<key>name</key><string>invalid.deprecated.lsl</string>
 		</dict>
 		<dict>
+			<key>match</key><string>\b(?:ll(?:Get(?:Pizza|PowerThurst)|AvatarOnTargetSitsAndWaits))\b</string>
+			<key>name</key><string>invalid.deprecated.lsl</string>
+		</dict>
+		<dict>
 			<key>match</key><string>\b(?:ll(?:GodLikeRezObject|SetInventoryPermMask|SetObjectPermMask))\b</string>
 			<key>name</key><string>god.function.lsl</string>
 		</dict>
