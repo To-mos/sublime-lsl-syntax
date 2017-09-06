@@ -55,6 +55,10 @@
 			<key>name</key><string>depricated.function.lsl</string>
 		</dict>
 		<dict>
+			<key>match</key><string>\b(?:PF_(?:FOR_SALE(?:_OBJECTS)?|SHOW_DIRECTORY|ALLOW_(?:DEED_TO_GROUP|PUBLISH)|DENY_(?:ANONYMOUS|IDENTIFIED|TRANSACTED)|CONTRIBUTE_WITH_DEED|SELL_PARCEL_OBJECTS|MATURE_PUBLISH|(?:URL_(?:WEB_PAGE|RAW_HTML)))|PRIM_(?:CAST_SHADOWS|MATERIAL_LIGHT)|PRIM_TYPE_LEGACY|LL_PART_(?:HUD|DEAD_MASK)|PSYS_(?:PART_BEAM_MASK|SRC_(?:INNERANGLE|OUTERANGLE)))\b</string>
+			<key>name</key><string>invalid.deprecated.lsl</string>
+		</dict>
+		<dict>
 			<key>match</key><string>\b(?:ll(?:GodLikeRezObject|SetInventoryPermMask|SetObjectPermMask))\b</string>
 			<key>name</key><string>god.function.lsl</string>
 		</dict>
