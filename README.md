@@ -1,3 +1,6 @@
+### Use Sublime Text 3? Go use the new plugin.
+https://github.com/To-mos/sublime3-lsl-syntax
+
 # Sublime Text lsl syntax
 
 Syntax highlighting and code completion for Sublime Text
